@@ -1,4 +1,4 @@
-# Kareriheights
+# User Reg(Sample Project)
 
 ## Getting Started
 
@@ -94,9 +94,9 @@ MongoDB server version: 4.0.2
 
 - Connect to development mongo server
 <pre><code>
-$ mongo 35.200.164.78/kareriheights -u 3bu1 -p 1234567890 --authenticationDatabase kareriheights
+$ mongo IP/kareriheights -u 3bu1 -p 1234567890 --authenticationDatabase DB
 MongoDB shell version v4.0.2
-connecting to: mongodb://35.200.164.78:27017/kareriheights
+connecting to: mongodb://35.200.164.78:27017/IP
 MongoDB server version: 4.0.2
 > use kareriheights
 switched to db kareriheights
@@ -107,11 +107,11 @@ switched to db kareriheights
 ### Credentials
 
 <pre>
-Server Ip: 35.200.164.78
-Database: kareriheights
+Server Ip: <Your IP>
+Database: <your Collection Name>
 User:  3bu1
 Password: 1234567890
-authenticationDatabase: kareriheights
+authenticationDatabase: <Your DB>
 </pre>
 
 ## Running in Development Mode
