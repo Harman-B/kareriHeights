@@ -1,0 +1,49 @@
+<h1><label for="Activity"></label></h1>
+<div name="Activity" class="container row">
+	<div class="col-sm-8">
+			<div *ngIf="!hidenewActivity">
+					<h2>New Activity</h2>
+					<form #form="ngForm" (ngSubmit)="onSubmitAddActivity(form.value)" class="well">
+						<div class="form-group">
+							<label>Title</label>
+							<input type="text" class="form-control" required name="title" ngModel>
+						</div>
+						<div class="form-group">
+							<label>Name</label>
+							<input type="text" class="form-control" required name="name" ngModel>
+						</div>
+						<div class="form-group">
+							<label>Duration</label>
+							<input type="text" class="form-control" required name="duration" ngModel>
+						</div>
+						<div class="form-group">
+								<label>Price</label>
+								<input type="number" class="form-control" required name="price" ngModel>
+							</div>
+						<div class="form-group">
+								<label>Location</label>
+								<input type="text" class="form-control" required name="location" ngModel>
+							</div>
+						<div class="form-group">
+							<label>Description</label>
+							<input type="text" class="form-control" name="description" ngModel>
+						</div>
+						<div class="form-group">
+								<label>TermsandConditions</label>
+								<input type="text" class="form-control" name="termsandconditions" ngModel>
+							</div>
+												
+						<button type="submit" class="btn btn-success">Save</button>
+					</form>
+				</div>
+
+	
+
+	<activity-detail (updateActivityEvent)="onUpdateActivityEvent($event)"  
+	*ngIf="selectedActivity && hidenewActivity" [activity]="selectedActivity"></activity-detail>
+	</div>
+	<div class="col-sm-4">
+			<button style="margin-bottom:2px;" type="button" (click)="newActivity()" class="btn btn-success btn-block">+ New Activity</button>
+    <activity-list (SelectActivity)="onSelectActivity($event)" [activities]="activities"></activity-list>	
+	</div>
+</div>

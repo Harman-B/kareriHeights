@@ -1,0 +1,48 @@
+<div>
+  <form class="well">  
+      <h3 *ngIf="!editTitle" (click)="onTitleClick()">{{activity.title}}</h3>     
+      <div *ngIf="editTitle" class="form-group">
+          <input type="input" class="form-control" name="title" required placeholder="title"
+          [(ngModel)]="activity.title">
+      </div>
+      <div class="form-group">
+            <input type="input" class="form-control" name="_id" required placeholder="_id"
+            [(ngModel)]="activity._id">
+        </div>
+      <div class="form-group">
+          <input type="input" class="form-control" name="name" required placeholder="name"
+          [(ngModel)]="activity.name">
+      </div>
+      <div class="form-group">
+        <input type="input" class="form-control" name="duration" required placeholder="duration"
+        [(ngModel)]="activity.duration">
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" name="price" required placeholder="price"
+      [(ngModel)]="activity.price">
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" rows="5" name="desc" [(ngModel)]="activity.location">
+    </textarea>
+  </div> 
+
+      <div class="form-group">
+          <textarea class="form-control" rows="5" name="description" [(ngModel)]="activity.description">
+          </textarea>
+      </div> 
+      <div class="form-group">
+        <textarea class="form-control" rows="5" name="termsandconditions" [(ngModel)]="activity.termsandconditions">
+        </textarea>
+    </div> 
+    <div class="form-group">
+      <input type="input" class="form-control" name="status" required placeholder="status"
+      [(ngModel)]="activity.status">
+  </div>
+  <div class="form-group">
+    <input type="input" class="form-control" name="uid" required placeholder="uid"
+    [(ngModel)]="activity.uid">
+</div>
+      <button type="button" (click)="updateActivity()" class="btn btn-primary">Update</button>  
+      <!-- <button type="button" (click)="deleteactivity()" class="btn btn-danger">Delete</button>     -->
+  </form>
+</div>
