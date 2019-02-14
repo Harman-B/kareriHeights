@@ -338,7 +338,7 @@
 |  Collection Name  |  bookingorder |
 |  MIME Type |  application/json  |
 |  Request Data | {"id":"5b9798e7ef8a46456eabf89d"} |
-| Response Data | {{
+| Response Data | {
     "_id" : ObjectId("5b97998def8a46456eabf89e"),
     "uid" : "adcadcadvadv",
     "status" : false,
